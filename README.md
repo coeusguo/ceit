@@ -2,6 +2,7 @@
 
 
 This repository is the official implementation of CeiT (Convolution-enhanced image Transformer). It builds from [Data-Efficient Vision Transformer](https://github.com/facebookresearch/deit) and [timm](https://github.com/rwightman/pytorch-image-models)
+![CeiT](.github/ceit.png)
 
 For details see [Incorporating Convolution Designs into Visual Transformers](https://arxiv.org/pdf/2103.11816.pdf) by Kun Yuan, Shaopeng Guo, Ziwei Liu, Aojun Zhou, Fengwei Yu and Wei Wu
 
@@ -93,8 +94,8 @@ CeiT-small
 python -m torch.distributed.launch --nproc_per_node=4 --use_env main.py --model ceit_small_patch16_224 --batch-size 256 --data-path /path/to/imagenet
 ```
 
-To train CeiT-Tiny and Deit-small on ImageNet on a single node with 8 gpus for 100 epochs run:
+To train CeiT-Tiny and Deit-small on ImageNet on a single node with 4 gpus for 100 epochs run:
 CeiT-base
 ```
-python -m torch.distributed.launch --nproc_per_node=4 --use_env main.py --model ceit_base_patch16_224 --batch-size 256 --data-path /path/to/imagenet
+python -m torch.distributed.launch --nproc_per_node=4 --use_env main.py --model ceit_base_patch16_224 --batch-size 256 --data-path /path/to/imagenet --epochs 100
 ```

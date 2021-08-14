@@ -182,10 +182,8 @@ class Block(nn.Module):
                 kernel_size=kernel_size, with_bn=with_bn,
             )
         else:  # LCA
-            self.attn = Attention(
+            self.attn = AttentionLCA(
                 dim, num_heads=num_heads, qkv_bias=qkv_bias, qk_scale=qk_scale, attn_drop=attn_drop, proj_drop=drop)
-            # self.attn = AttentionLCA(
-            #     dim, num_heads=num_heads, qkv_bias=qkv_bias, qk_scale=qk_scale, attn_drop=attn_drop, proj_drop=drop)
             self.feedforward = Mlp(
                 in_features=dim, hidden_features=mlp_hidden_dim, act_layer=act_layer, drop=drop
             )
@@ -196,13 +194,10 @@ class Block(nn.Module):
             x = x + self.drop_path(self.leff(self.norm2(x)))
             return x, x[:, 0]
         else:  # LCA
-            # _, last_token = torch.split(x, [x.size(1)-1, 1], dim=1)
-            # x = last_token + self.drop_path(self.attn(self.norm1(x)))
-            # x = x + self.drop_path(self.feedforward(self.norm2(x)))
-            # return x
-            x = x + self.drop_path(self.attn(self.norm1(x)))
+            _, last_token = torch.split(x, [x.size(1)-1, 1], dim=1)
+            x = last_token + self.drop_path(self.attn(self.norm1(x)))
             x = x + self.drop_path(self.feedforward(self.norm2(x)))
-            return x[:, -1]
+            return x
 
 
 class HybridEmbed(nn.Module):

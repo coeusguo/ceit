@@ -2,6 +2,7 @@
 
 
 This repository is the official implementation of CeiT (Convolution-enhanced image Transformer). It builds from [Data-Efficient Vision Transformer](https://github.com/facebookresearch/deit) and [timm](https://github.com/rwightman/pytorch-image-models)
+
 ![CeiT](ceit.png)
 
 For details see [Incorporating Convolution Designs into Visual Transformers](https://arxiv.org/pdf/2103.11816.pdf) by Kun Yuan, Shaopeng Guo, Ziwei Liu, Aojun Zhou, Fengwei Yu and Wei Wu

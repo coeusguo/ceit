@@ -83,7 +83,7 @@ python main.py --eval --model <model name> --resume /path/to/checkpoint --data-p
 ```
 
 ## Training
-To train CeiT-Tiny and Deit-small on ImageNet on a single node with 4 gpus for 300 epochs run:
+To train CeiT-Tiny and CeiT-small on ImageNet on a single node with 4 gpus for 300 epochs run:
 
 CeiT-tiny
 ```
@@ -95,7 +95,7 @@ CeiT-small
 python -m torch.distributed.launch --nproc_per_node=4 --use_env main.py --model ceit_small_patch16_224 --batch-size 256 --data-path /path/to/imagenet
 ```
 
-To train CeiT-Tiny and Deit-small on ImageNet on a single node with 4 gpus for 100 epochs run:
+To train CeiT-Base on ImageNet on a single node with 4 gpus for 100 epochs run:
 CeiT-base
 ```
 python -m torch.distributed.launch --nproc_per_node=4 --use_env main.py --model ceit_base_patch16_224 --batch-size 256 --data-path /path/to/imagenet --epochs 100

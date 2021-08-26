@@ -35,7 +35,7 @@ If you use this code for a paper please cite:
 We provide baseline CeiT models pretrained on ImageNet 2012. The checkpoint can be downloaded from [here](https://drive.google.com/file/d/1S19SQUic9ILBGNkcJTOy74MGoj-JRM4x/view?usp=sharing) 
 
 | model name | epoch | acc@1 | acc@5 | #params  |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | ceit_tiny_patch16_224 | 300 | 76.4 | 93.4 | 6.4M |
 | ceit_tiny_patch16_384 | 300 | 78.8| 94.7 | 6.4M |
 | ceit_small_patch16_224 | 300 | 82.0 | 95.9 | 24.2M |

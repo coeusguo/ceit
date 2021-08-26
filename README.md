@@ -32,15 +32,16 @@ If you use this code for a paper please cite:
 
 # Model Zoo
 
-We provide baseline CeiT models pretrained on ImageNet 2012.
+We provide baseline CeiT models pretrained on ImageNet 2012. The checkpoint can be downloaded from [here](https://drive.google.com/file/d/1S19SQUic9ILBGNkcJTOy74MGoj-JRM4x/view?usp=sharing) 
 
-| model name | epoch | acc@1 | acc@5 | #params | url |
+| model name | epoch | acc@1 | acc@5 | #params  |
 | --- | --- | --- | --- | --- | --- |
-| ceit_tiny_patch16_224 | 300 | 76.4 | 93.4 | 6.4M | [TODO](TODO) |
-| ceit_tiny_patch16_384 | 300 | 78.8| 94.7 | 6.4M| [TODO](TODO) |
-| ceit_small_patch16_224 | 300 | 82.0 | 95.9 | 24.2M | [TODO](TODO) |
-| ceit_small_patch16_384 | 300 | 83.3 | 96.5 | 24.2M | [TODO](TODO) |
-| ceit_base_patch16_224 | 100 | 81.8 | - | - | [TODO](TODO) |
+| ceit_tiny_patch16_224 | 300 | 76.4 | 93.4 | 6.4M |
+| ceit_tiny_patch16_384 | 300 | 78.8| 94.7 | 6.4M |
+| ceit_small_patch16_224 | 300 | 82.0 | 95.9 | 24.2M |
+| ceit_small_patch16_384 | 300 | 83.3 | 96.5 | 24.2M |
+| ceit_base_patch16_224 | 100 | 81.9 | 95.8 | - |
+| ceit_base_patch16_224 | 150 | 82.5 | 95.6 | - |
 
 Before using it, make sure you have the pytorch-image-models package [`timm==0.3.2`](https://github.com/rwightman/pytorch-image-models) by [Ross Wightman](https://github.com/rwightman) installed. Note that our work relies of the augmentations proposed in this library.
 

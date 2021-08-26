@@ -40,8 +40,8 @@ We provide baseline CeiT models pretrained on ImageNet 2012. The checkpoint can 
 | ceit_tiny_patch16_384 | 300 | 78.8| 94.7 | 6.4M |
 | ceit_small_patch16_224 | 300 | 82.0 | 95.9 | 24.2M |
 | ceit_small_patch16_384 | 300 | 83.3 | 96.5 | 24.2M |
-| ceit_base_patch16_224 | 100 | 81.9 | 95.8 | - |
-| ceit_base_patch16_224 | 150 | 82.5 | 95.6 | - |
+| ceit_base_patch16_224 | 100 | 81.9 | 95.8 | 94.4M |
+| ceit_base_patch16_224 | 150 | 82.5 | 95.6 | 94.4M |
 
 Before using it, make sure you have the pytorch-image-models package [`timm==0.3.2`](https://github.com/rwightman/pytorch-image-models) by [Ross Wightman](https://github.com/rwightman) installed. Note that our work relies of the augmentations proposed in this library.
 
